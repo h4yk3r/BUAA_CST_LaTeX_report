@@ -1,0 +1,185 @@
+%!Mode:: "TeX:UTF-8"
+% 模板名称：BUAA_report
+% 模板版本：V.1（2020.10.15）
+% 请使用XeLaTeX进行编译
+% 如果要使用超链接\ref的话，编译两次，两次，两次！！！
+%
+% 此模板为北京航空航天大学网络空间安全学院实验报告模板（自用）
+% 基于电子科技大学信软学院实验报告模板制作（基于UESTC_Lab_Report_LaTeX_Template模板的改进版）
+% 在此向这个模板的原作者和所有改进者致谢！
+% 主要改动有：
+%           1.将配置单独放在了settings.tex文件中。
+%           2.超链接跳转功能，方便图片与文字相隔很远时进行阅读。（默认为蓝色，
+%           如需打印可在settings.tex中改为黑色或不使用超链接）
+
+
+\documentclass[a4paper,11pt,UTF8,AutoFakeBold= {2.88}]{ctexart}
+\input{settings.tex}
+% 导入配置文件settings.tex，
+% 配置参数均存储在settings.tex文件中，
+% 添加或修改均需在该文件中进行
+
+% 页眉页脚
+\pagestyle{fancy}
+\chead{课程名称：实验报告标题} %页眉正中
+\rhead{} %右上角
+\cfoot{\thepage} %显示页码
+\renewcommand{\headrulewidth}{0.4pt} %分割线宽度
+\renewcommand{\footrulewidth}{0.4pt}
+
+\begin{document}
+\xiaosihao\song
+
+\begin{titlepage}
+  \leftline{\ktgb{\textbf{\yihao{ 北京航空航天大学}\underline{\xiaoyihao{网络空间安全学院}}}}}
+\vspace{5.5cm}
+\center{\shiyanbaogao{\ktgb{\textbf{标~ 准~ 实~ 验~ 报~ 告}}}}
+\vspace{5.5cm}
+
+\begin{center}
+\begin{large}
+\begin{tabular}{rc}
+
+\xiaoerhao{\ktgb{\textbf{（实验）课程名称：}}}& \xiaoerhao{\ktgb{\textbf{XXXX}}}\\
+\cline{2-2}\\
+
+\end{tabular}
+\end{large}
+\end{center}
+
+\vspace{5cm}
+\begin{center}
+  \sihao{\song{\textbf{李田所-18114514}}}
+\end{center}
+
+\end{titlepage}
+\clearpage
+
+
+\leftline{\\[10pt]\sihao{\textbf{\song{姓名：XXX \hfill 学号：XXXX \hfill 实验时间：XXXX-XX-XX }}}}
+
+
+
+
+\setlength{\parskip}{6pt}  %定义段间距
+
+\section{实验项目名称：XXX}
+
+
+
+\section{实验原理:}
+
+
+
+\section{实验步骤:}
+
+\subsection{复制}
+
+按下ctrl+c
+
+\subsection{粘贴}
+
+按下ctrl+v
+
+\section{结果分析:}
+
+
+\section{实验结论、心得体会:}
+
+
+\section{改进建议:}
+
+
+
+%\vspace{4cm}
+\clearpage
+
+\begin{appendix}
+
+\section{代码示例}
+
+%listings官方文档：http://texdoc.net/texmf-dist/doc/latex/listings/listings.pdf
+
+
+\begin{lstlisting}[caption={一段python代码},captionpos=b,language=python]
+  #!/usr/bin/python
+  # -*- coding: UTF-8 -*-
+   
+  print("hello world")
+\end{lstlisting}
+
+支持的语言如图\ref{language}
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[scale=0.7]{language}
+  %\includegraphics[width=\textwidth]{language}
+  \bottomcaption{\wuhao{language}}
+  \label{language}
+  \end{figure}
+
+\section{图片示例}
+超链接：运行结果如图\ref{logo}
+  \begin{figure}[!htbp]
+  \centering
+  %\includegraphics[scale=0.1]{logo}
+  \includegraphics[width=\textwidth]{logo}
+  \bottomcaption{\wuhao{北京航空航天大学}}
+  \label{logo}
+  \end{figure}
+  
+\clearpage
+
+\section{伪代码示例}
+
+\begin{algorithm}
+\caption{某个算法}
+\begin{algorithmic}[1]  %每行显示行号
+\Require 某个输入
+\Ensure 某个输出
+\Function {函数名} {参数列表}
+    \State 某个变量  $\gets$ 某个变量
+\EndFunction
+\end{algorithmic}
+\end{algorithm}
+
+\clearpage
+
+\section{字体示例}
+\hei{黑体}
+\hwxk{华文行楷}
+
+\clearpage
+
+\section{表格示例}
+
+\begin{table}[!h!tbp]
+\caption{一个简单的表格}\label{tab1}
+  \centering
+  \begin{tabular}{|l|c|c|}
+	\hline
+	功能          &WEB         &APP         \\ \hline
+	注册          &$\surd$     &$\surd$     \\ \hline
+	登录          &$\surd$     &$\surd$     \\ \hline
+	推送          &$\times$    &$\surd$     \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[!h!tbp]
+\caption{自定义表格}\label{tab2}
+  \centering
+\begin{tabular*}{0.75\textwidth}{@{\extracolsep{\fill}}lcc}
+    \toprule
+    功能          &WEB         &APP         \\
+    \midrule
+    注册          &$\surd$     &$\surd$     \\
+    登录          &$\surd$     &$\surd$     \\
+    推送          &$\times$    &$\surd$     \\
+    \bottomrule
+\end{tabular*}
+\end{table}
+
+
+\end{appendix}
+
+\end{document}
