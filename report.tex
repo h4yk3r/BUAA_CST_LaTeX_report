@@ -1,6 +1,6 @@
 %!Mode:: "TeX:UTF-8"
 % 模板名称：BUAA_report
-% 模板版本：V.1（2020.10.15）
+% 模板版本：V0.2（2020.10.16）
 % 请使用XeLaTeX进行编译
 % 如果要使用超链接\ref的话，编译两次，两次，两次！！！
 %
@@ -19,9 +19,12 @@
 % 配置参数均存储在settings.tex文件中，
 % 添加或修改均需在该文件中进行
 
+\newcommand{\docname}{报告名称} %在这里更改实验报告的名称
+
 % 页眉页脚
 \pagestyle{fancy}
-\chead{课程名称：实验报告标题} %页眉正中
+\chead{\docname} %页眉正中
+\lhead{} %左上角
 \rhead{} %右上角
 \cfoot{\thepage} %显示页码
 \renewcommand{\headrulewidth}{0.4pt} %分割线宽度
@@ -33,7 +36,7 @@
 \begin{titlepage}
   \leftline{\ktgb{\textbf{\yihao{ 北京航空航天大学}\underline{\xiaoyihao{网络空间安全学院}}}}}
 \vspace{5.5cm}
-\center{\shiyanbaogao{\ktgb{\textbf{标~ 准~ 实~ 验~ 报~ 告}}}}
+\center{\shiyanbaogao{\ktgb{\textbf{\docname}}}}
 \vspace{5.5cm}
 
 \begin{center}
@@ -132,7 +135,7 @@
 
 \section{伪代码示例}
 
-\begin{algorithm}
+\begin{algorithm}[H]
 \caption{某个算法}
 \begin{algorithmic}[1]  %每行显示行号
 \Require 某个输入
